@@ -66,9 +66,15 @@ void fsm_automatic_run()
 		led7SEG_run();
 		check_button_run();
 		break;
-	case Mode1:
-		count_led1 = 1;
+	case Mode2:
+		count_led1 = 2;
 		count_led2 = 0;
+		led7SEG_run();
+		setTimer1(500);
+		if(timer1_flag == 1)
+		{
+			led_display_run(Mode2);
+		}
 		break;
 	default:
 		break;

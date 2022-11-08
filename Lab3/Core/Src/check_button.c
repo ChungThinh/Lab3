@@ -10,6 +10,18 @@ void check_button_run()
 {
 	if(isButtonPressed(0))
 	{
-		status = Mode1;
+		count_button++;
+	}
+	switch(count_button)
+	{
+		case 2:
+			status = Mode2;
+			break;
+		case 3:
+			status = Mode3;
+			break;
+		case 4:
+			status = Mode4;
+			break;
 	}
 }

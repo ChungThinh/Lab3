@@ -35,5 +35,5 @@ extern int status_led1;
 extern int status_led2;
 extern int count_led1;
 extern int count_led2;
-
+extern int count_button;
 #endif /* INC_GLOBAL_H_ */
