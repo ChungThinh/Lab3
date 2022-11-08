@@ -8,5 +8,8 @@
 
 void check_button_run()
 {
-
+	if(isButtonPressed(0))
+	{
+		status = Mode1;
+	}
 }

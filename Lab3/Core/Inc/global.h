@@ -13,6 +13,7 @@
 #include "led_display.h"
 #include "led7seg.h"
 #include "led7seg_run.h"
+#include "check_button.h"
 #include "main.h"
 
 #define INIT				1

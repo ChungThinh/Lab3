@@ -27,8 +27,9 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Core/Inc/led_display.h ../Core/Inc/global.h \
  ../Core/Inc/software_timer.h ../Core/Inc/button.h \
  ../Core/Inc/led_display.h ../Core/Inc/led7seg.h \
- ../Core/Inc/led7seg_run.h ../Core/Inc/led7seg.h \
- ../Core/Inc/check_button.h ../Core/Inc/fsm_automatic.h
+ ../Core/Inc/led7seg_run.h ../Core/Inc/check_button.h \
+ ../Core/Inc/led7seg.h ../Core/Inc/check_button.h \
+ ../Core/Inc/fsm_automatic.h
 
 ../Core/Inc/main.h:
 
@@ -99,6 +100,8 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Core/Inc/led7seg.h:
 
 ../Core/Inc/led7seg_run.h:
+
+../Core/Inc/check_button.h:
 
 ../Core/Inc/led7seg.h:
 

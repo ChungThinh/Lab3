@@ -25,7 +25,7 @@ Core/Src/led7seg.o: ../Core/Src/led7seg.c ../Core/Inc/led7seg.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h \
  ../Core/Inc/led_display.h ../Core/Inc/led7seg.h \
- ../Core/Inc/led7seg_run.h
+ ../Core/Inc/led7seg_run.h ../Core/Inc/check_button.h
 
 ../Core/Inc/led7seg.h:
 
@@ -90,3 +90,5 @@ Core/Src/led7seg.o: ../Core/Src/led7seg.c ../Core/Inc/led7seg.h \
 ../Core/Inc/led7seg.h:
 
 ../Core/Inc/led7seg_run.h:
+
+../Core/Inc/check_button.h:
