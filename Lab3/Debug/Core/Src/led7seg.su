@@ -1,0 +1,4 @@
+led7seg.c:9:6:display7SEG	16	static
+led7seg.c:45:6:display7SEGOPERSITE	16	static
+led7seg.c:82:6:two_led7SEG1	8	static
+led7seg.c:99:6:two_led7SEG2	8	static
