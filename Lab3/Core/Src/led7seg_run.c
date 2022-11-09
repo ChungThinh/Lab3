@@ -15,10 +15,13 @@ void led7SEG_run()
 		two_led7SEG1();
 		setTimer2(100);
 	}
-	if(timer3_flag == 1)
+	if(status != MODE)
 	{
-		count_led1--;
-		count_led2--;
-		setTimer3(1000);
+		if(timer3_flag == 1)
+		{
+			count_led1--;
+			count_led2--;
+			setTimer3(1000);
+		}
 	}
 }

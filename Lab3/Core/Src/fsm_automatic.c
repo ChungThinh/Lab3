@@ -14,10 +14,17 @@ void fsm_automatic_run()
 	case INIT:
 		led_display_run(INIT);
 		status = AUTO_RED_GREEN;
+		if(red != 0)
+		{
+			count_led1 = red;
+		}
+		else
+		{
+			count_led1 = 4;
+		}
 		setTimer1(3000);
 		setTimer2(100);
 		setTimer3(1000);
-		count_led1 = 4;
 		count_led2 = 2;
 		break;
 	case AUTO_RED_GREEN:
@@ -26,6 +33,7 @@ void fsm_automatic_run()
 		{
 			status = AUTO_YELLOW_ROW;
 			count_led2 = 1;
+			count_led1 = 1;
 			setTimer1(2000);
 			setTimer3(1000);
 		}
@@ -51,6 +59,7 @@ void fsm_automatic_run()
 		{
 			status = AUTO_YELLOW_LINE;
 			count_led1 = 1;
+			count_led2 = 1;
 			setTimer1(2000);
 			setTimer3(1000);
 		}
@@ -66,14 +75,27 @@ void fsm_automatic_run()
 		led7SEG_run();
 		check_button_run();
 		break;
-	case Mode2:
-		count_led1 = 2;
-		count_led2 = 0;
+	case MODE:
 		led7SEG_run();
-		setTimer1(500);
 		if(timer1_flag == 1)
 		{
-			led_display_run(Mode2);
+			led_display_run(status_led);
+			setTimer1(500);
+		}
+		if(isButtonPressed(0) == 1)
+		{
+			count_button++;
+			check_button_run();
+		}
+		if(isButtonPressed(1) == 1)
+		{
+			count_led2++;
+		}
+		if(isButtonPressed(2))
+		{
+			red = count_led2;
+			count_button = 0;
+			status = INIT;
 		}
 		break;
 	default:

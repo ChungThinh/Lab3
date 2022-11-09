@@ -49,7 +49,7 @@ void getKeyInput(){
 			  KeyReg3[i] = KeyReg2[i];
 
 			  if (KeyReg2[i] == PRESSED_STATE){
-				  TimeForKeyPress[i] = 200;
+				  TimeForKeyPress[i] = 100;
 				  subKeyProcess(i);
 			  }
 		  }else{
@@ -58,7 +58,7 @@ void getKeyInput(){
 				  if (KeyReg2[i] == PRESSED_STATE){
 					  subKeyProcess(i);
 				  }
-				  TimeForKeyPress[i] = 200;
+				  TimeForKeyPress[i] = 100;
 			  }
 
 		  }

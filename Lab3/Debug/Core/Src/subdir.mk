@@ -8,7 +8,6 @@ C_SRCS += \
 ../Core/Src/button.c \
 ../Core/Src/check_button.c \
 ../Core/Src/fsm_automatic.c \
-../Core/Src/fsm_manual.c \
 ../Core/Src/global.c \
 ../Core/Src/led7seg.c \
 ../Core/Src/led7seg_run.c \
@@ -25,7 +24,6 @@ OBJS += \
 ./Core/Src/button.o \
 ./Core/Src/check_button.o \
 ./Core/Src/fsm_automatic.o \
-./Core/Src/fsm_manual.o \
 ./Core/Src/global.o \
 ./Core/Src/led7seg.o \
 ./Core/Src/led7seg_run.o \
@@ -42,7 +40,6 @@ C_DEPS += \
 ./Core/Src/button.d \
 ./Core/Src/check_button.d \
 ./Core/Src/fsm_automatic.d \
-./Core/Src/fsm_manual.d \
 ./Core/Src/global.d \
 ./Core/Src/led7seg.d \
 ./Core/Src/led7seg_run.d \

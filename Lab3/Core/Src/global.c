@@ -6,8 +6,10 @@
  */
 #include "global.h"
 int status = INIT;
+int status_led = 0;
 int status_led1 = 0;
 int status_led2 = 0;
 int count_led1 = 0;
 int count_led2 = 0;
 int count_button = 0;
+int red = 0;
