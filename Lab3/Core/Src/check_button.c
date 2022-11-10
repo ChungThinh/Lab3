@@ -20,7 +20,8 @@ void check_button_run()
 			count_led1 = 2;
 			count_led2 = 1;
 			setTimer1(500);
-			status = MODE;
+			status1 = MODE;
+			status2 = MODE;
 			status_led = Mode2;
 			led_display_run(Mode2);
 			break;
@@ -30,7 +31,8 @@ void check_button_run()
 			count_led1 = 3;
 			count_led2 = 1;
 			setTimer1(500);
-			status = MODE;
+			status1 = MODE;
+			status2 = MODE;
 			status_led = Mode3;
 			led_display_run(Mode3);
 			break;
@@ -40,12 +42,14 @@ void check_button_run()
 			count_led1 = 4;
 			count_led2 = 1;
 			setTimer1(500);
-			status = MODE;
+			status1 = MODE;
+			status2 = MODE;
 			status_led = Mode4;
 			led_display_run(Mode4);
 			break;
 		case 5:
-			status = INIT;
+			status1 = INIT1;
+			status2 = INIT2;
 			break;
 	}
 	if(count_button == 5)

@@ -10,6 +10,7 @@
 
 #include "global.h"
 
-void led7SEG_run();
+void led7SEG_run1();
+void led7SEG_run2();
 
 #endif /* INC_LED7SEG_RUN_H_ */

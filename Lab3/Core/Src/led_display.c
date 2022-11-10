@@ -10,31 +10,45 @@ void led_display_run(int led_status)
 {
 	switch(led_status)
 	{
-		case INIT:
+		case INIT1:
 			HAL_GPIO_WritePin(RED_LINE_GPIO_Port,RED_LINE_Pin , SET);
 			HAL_GPIO_WritePin(GREEN_LINE_GPIO_Port, GREEN_LINE_Pin, SET);
 			HAL_GPIO_WritePin(YELLOW_LINE_GPIO_Port, YELLOW_LINE_Pin, SET);
+			break;
+		case INIT2:
 			HAL_GPIO_WritePin(RED_ROW_GPIO_Port,RED_ROW_Pin , SET);
 			HAL_GPIO_WritePin(GREEN_ROW_GPIO_Port, GREEN_ROW_Pin, SET);
 			HAL_GPIO_WritePin(YELLOW_ROW_GPIO_Port, YELLOW_ROW_Pin, SET);
 			break;
-		case AUTO_RED_GREEN:
+		case RED1:
 			HAL_GPIO_WritePin(RED_LINE_GPIO_Port,RED_LINE_Pin , RESET);
-			HAL_GPIO_WritePin(GREEN_ROW_GPIO_Port, GREEN_ROW_Pin, RESET);
+			HAL_GPIO_WritePin(GREEN_LINE_GPIO_Port, GREEN_LINE_Pin, SET);
+			HAL_GPIO_WritePin(YELLOW_LINE_GPIO_Port, YELLOW_LINE_Pin, SET);
 			break;
-		case AUTO_YELLOW_ROW:
+		case YELLOW1:
+			HAL_GPIO_WritePin(RED_LINE_GPIO_Port,RED_LINE_Pin , SET);
+			HAL_GPIO_WritePin(GREEN_LINE_GPIO_Port, GREEN_LINE_Pin, SET);
+			HAL_GPIO_WritePin(YELLOW_LINE_GPIO_Port, YELLOW_LINE_Pin, RESET);
+			break;
+		case GREEN1:
+			HAL_GPIO_WritePin(RED_LINE_GPIO_Port,RED_LINE_Pin , SET);
+			HAL_GPIO_WritePin(GREEN_LINE_GPIO_Port, GREEN_LINE_Pin, RESET);
+			HAL_GPIO_WritePin(YELLOW_LINE_GPIO_Port, YELLOW_LINE_Pin, SET);
+			break;
+		case RED2:
+			HAL_GPIO_WritePin(RED_ROW_GPIO_Port,RED_ROW_Pin , RESET);
+			HAL_GPIO_WritePin(GREEN_ROW_GPIO_Port, GREEN_ROW_Pin, SET);
+			HAL_GPIO_WritePin(YELLOW_ROW_GPIO_Port, YELLOW_ROW_Pin, SET);
+			break;
+		case YELLOW2:
+			HAL_GPIO_WritePin(RED_ROW_GPIO_Port,RED_ROW_Pin , SET);
 			HAL_GPIO_WritePin(GREEN_ROW_GPIO_Port, GREEN_ROW_Pin, SET);
 			HAL_GPIO_WritePin(YELLOW_ROW_GPIO_Port, YELLOW_ROW_Pin, RESET);
 			break;
-		case AUTO_GREEN_RED:
-			HAL_GPIO_WritePin(RED_LINE_GPIO_Port,RED_LINE_Pin, SET);
-			HAL_GPIO_WritePin(GREEN_LINE_GPIO_Port, GREEN_LINE_Pin, RESET);
-			HAL_GPIO_WritePin(RED_ROW_GPIO_Port,RED_ROW_Pin , RESET);
+		case GREEN2:
+			HAL_GPIO_WritePin(RED_ROW_GPIO_Port,RED_ROW_Pin , SET);
+			HAL_GPIO_WritePin(GREEN_ROW_GPIO_Port, GREEN_ROW_Pin, RESET);
 			HAL_GPIO_WritePin(YELLOW_ROW_GPIO_Port, YELLOW_ROW_Pin, SET);
-			break;
-		case AUTO_YELLOW_LINE:
-			HAL_GPIO_WritePin(GREEN_LINE_GPIO_Port, GREEN_LINE_Pin, SET);
-			HAL_GPIO_WritePin(YELLOW_LINE_GPIO_Port, YELLOW_LINE_Pin, RESET);
 			break;
 		case Mode2:
 			HAL_GPIO_TogglePin(RED_LINE_GPIO_Port,RED_LINE_Pin);
